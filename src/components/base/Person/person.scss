@@ -1,0 +1,48 @@
+.person-wrapper{
+    position: relative !important;
+    height: 100%;
+    background: rgb(239, 239, 239);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: calc( var(--vh,1vh) * 28.9575 - var(--header-mobile) );
+
+
+    .person-inner{
+        touch-action: none;
+        position: absolute;
+        width: 100%;
+        left: 50%;
+
+        pointer-events: none;
+        top: 49%;
+        transform: translate(-50%, -50%);
+
+
+        div{
+            position: absolute;
+            &.model{
+                transform: translate(0, 0);
+                z-index: 1;
+                position: relative;
+            }
+            &.shirt{
+                transform: translate(0, 22%);
+                z-index: 3;
+            }
+            &.jacket{
+                transform: translate(0, 22%);
+                z-index: 4;
+            }
+            &.pants{
+                transform: translate(0, 58%);
+                z-index: 2;
+            }
+            &.shoes{
+                transform: translate(0, -100%);
+                z-index: 5;
+            }
+
+        }
+    }
+}

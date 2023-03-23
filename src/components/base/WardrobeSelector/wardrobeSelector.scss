@@ -1,0 +1,207 @@
+.wardrobe_wrapper {
+    background: #000;
+    height: 100%;
+    color: #fcfcfc;
+
+    @media screen and (max-width: 460px) {
+        min-width: 100%;
+        & > div {
+            display: flex;
+            flex-direction: row;
+            width: 100vw;
+            overflow-x: scroll;
+
+        }
+    }
+
+    .wardrobe_openers {
+        overflow-y: scroll;
+        height: 100%;
+        padding: 10px;
+        .selector-card{
+            margin-bottom: 18px !important;
+        }
+
+        @media screen and (max-width: 460px) {
+            .selector-card {
+                max-width: 88px;
+                max-height: 88px;
+                min-height: 88px;
+                min-width: 88px;
+                margin-bottom: 0 !important;
+                margin-right: 12px !important;
+
+                .card-body {
+                    max-width: 88px;
+                    max-height: 88px;
+                    min-height: 88px;
+                    min-width: 88px;
+                }
+
+                .card-footer {
+                    display: block;
+                    font-size: 13px;
+                    font-weight: 300;
+                }
+            }
+        }
+    }
+
+    .wardrobe_tabs {
+        overflow-y: scroll;
+        height: 100%;
+        padding: 10px;
+
+        @media screen and (max-width: 460px) {
+            padding: 4px;
+            min-width: 100%;
+        }
+
+        .wardrobe-tab {
+            height: 100%;
+            .footer{
+                .mobile-info{
+                    display: none;
+                }
+            }
+            @media screen and (max-width: 460px) {
+                min-width: 100%;
+                display: flex;
+                flex-direction: column;
+                .header {
+                    span {
+                        display: none;
+                    }
+                }
+
+                .footer {
+                    display: flex;
+                    justify-content: center;
+                    margin-bottom: 4px;
+
+                    .btn {
+                        margin-left: auto;
+                        height: 30px !important;
+                        width: 80px !important;
+                        font-size: 13px;
+                    }
+                    .mobile-info{
+                        display: block;
+                    }
+                }
+            }
+
+            .items {
+                height: calc(100vh - 140px);
+                overflow-y: scroll;
+                padding: 10px 0;
+                margin-bottom: 6px;
+
+
+                @media screen and (max-width: 460px) {
+                    min-width: 100%;
+                    display: flex;
+                    overflow-y: hidden;
+                    overflow-x: scroll;
+                    height: 100px;
+                    margin-bottom: 0;
+
+                    .btn {
+                        height: 68px;
+                        margin-right: 10px;
+                        width: 40px !important;
+                        max-width: 40px !important;
+                        min-width: 40px !important;
+                        border-radius: 8px !important;
+                        margin-bottom: 2px !important;
+                    }
+
+                    $size: 68px;
+
+                    .selector-card {
+                        max-width: $size;
+                        max-height: $size;
+                        min-height: $size;
+                        min-width: $size;
+                        margin-bottom: 0px !important;
+                        margin-right: 10px;
+
+                        .card-body {
+                            max-width: $size;
+                            max-height: $size;
+                            min-height: $size;
+                            min-width: $size;
+                        }
+
+                        .card-footer {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .selector-card {
+        background-color: transparent;
+        max-width: 160px;
+        border: none;
+        cursor: pointer;
+
+        .card-body {
+            height: 100px;
+            width: 100px;
+            padding: 0 !important;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            margin: auto;
+            border: 1px solid #2c2c2c;
+            border-radius: 10px;
+            background-color: rgba(255, 255, 255, 0.9);
+
+            img {
+                object-fit: cover;
+                max-width: 90%;
+                max-height: 90%;
+                object-position: center;
+            }
+        }
+
+        .card-footer {
+            background-color: transparent !important;
+            border: none !important;
+            text-align: center;
+            padding: 2px !important;
+        }
+
+    }
+
+}
+
+
+.wardrobe-tab {
+    .selector-card {
+        margin-bottom: 10px !important;
+        .card-footer {
+            visibility: hidden;
+            font-size: 13px;
+            font-weight: 300;
+        }
+
+        &.active {
+            .card-body {
+                transition: all 100ms ease-in-out;
+                border: 1px solid #E2C858;
+                //box-shadow: 0 0 10px #E2C858;
+            }
+
+            .card-footer {
+                visibility: visible;
+                font-size: 13px;
+                font-weight: 300;
+            }
+        }
+    }
+}

@@ -1,0 +1,137 @@
+.thankyou-page-step{
+    &.loading{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100%;
+    }
+
+    .loading{
+        height: 300px;
+        width: 300px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        img{
+            max-width: 140px;
+        }
+
+
+        .lds-ellipsis {
+            display: inline-block;
+            position: relative;
+            width: 80px;
+            height: 80px;
+        }
+        .lds-ellipsis div {
+            position: absolute;
+            top: 33px;
+            width: 13px;
+            height: 13px;
+            border-radius: 50%;
+            background: #E2C858;
+            animation-timing-function: cubic-bezier(0, 1, 1, 0);
+        }
+        .lds-ellipsis div:nth-child(1) {
+            left: 8px;
+            animation: lds-ellipsis1 0.6s infinite;
+        }
+        .lds-ellipsis div:nth-child(2) {
+            left: 8px;
+            animation: lds-ellipsis2 0.6s infinite;
+        }
+        .lds-ellipsis div:nth-child(3) {
+            left: 32px;
+            animation: lds-ellipsis2 0.6s infinite;
+        }
+        .lds-ellipsis div:nth-child(4) {
+            left: 56px;
+            animation: lds-ellipsis3 0.6s infinite;
+        }
+        @keyframes lds-ellipsis1 {
+            0% {
+                transform: scale(0);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+        @keyframes lds-ellipsis3 {
+            0% {
+                transform: scale(1);
+            }
+            100% {
+                transform: scale(0);
+            }
+        }
+        @keyframes lds-ellipsis2 {
+            0% {
+                transform: translate(0, 0);
+            }
+            100% {
+                transform: translate(24px, 0);
+            }
+        }
+    }
+
+    .checkmark{
+        text-align: center;
+        margin-bottom: 40px;
+        svg{
+            fill: #E2C858;
+            height: 80px;
+            width: 80px;
+        }
+    }
+
+    .success-message{
+        p{
+            font-weight: bold;
+        }
+    }
+
+    .confirmation{
+        text-align: center;
+        font-size: 14px;
+        font-weight: normal !important;
+        a{
+            color: #E2C858;
+        }
+    }
+
+    .home{
+        text-align: center;
+        margin: 40px 0;
+        button{
+            font-size: 14px;
+        }
+    }
+
+    .terms{
+        font-size: 13px;
+        color: grey;
+        text-align: center;
+        margin-bottom: 40px;
+        a{
+            color: #E2C858;
+        }
+    }
+
+    .change{
+        margin-bottom: 40px;
+        text-align: center;
+        a.golden{
+            color: #E2C858;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        a.my-account{
+            text-transform: uppercase;
+            color: black;
+            padding-top: 20px;
+            display: inline-block;
+        }
+    }
+}

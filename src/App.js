@@ -1,14 +1,41 @@
+import React from 'react';
+import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import "./components/styles/global.scss"
+import './components/styles/global.scss';
 
-import LayoutDefault from "./components/layout";
-import LookBuilder from "./pages/LookBuilder";
+import LayoutDefault from './components/layout';
+import LookBuilderForm from './pages/LookBuilderForm';
+import Footer from './components/layout/footer';
+import SuitBuilderRoot from "./pages/SuitBuilderRoot";
+import {AppProvider} from "./context/SuitBuilderContext";
+import {SelectionProvider} from "./context/UserSelectionContext";
 
 function App() {
     return (
-        <LayoutDefault>
-            <LookBuilder/>
-        </LayoutDefault>
+        <Router>
+            <LayoutDefault>
+                <Routes>
+
+                    <Route path="/" element={
+                        <>
+                            <LookBuilderForm/>
+                            <Footer/>
+                        </>
+
+                    }/>
+
+                    <Route path="/suit-builder" element={
+                        <AppProvider>
+                            <SelectionProvider>
+                                <SuitBuilderRoot/>
+                            </SelectionProvider>
+                        </AppProvider>
+                    }/>
+
+                </Routes>
+
+            </LayoutDefault>
+        </Router>
     );
 }
 

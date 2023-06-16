@@ -1,9 +1,10 @@
 import {createRef, useEffect, useState} from "react";
 import "./wardrobeSelector.scss";
 import SelectorCard from "./Card";
+import {getFileURL} from "../../../api/getData";
 
 
-export default function WardrobeSelector({data, update}) {
+export default function WardrobeSelector({data, update, handleNextStep}) {
     const [currentPage, setCurrentPage] = useState(null);
     const [currentItem, setCurrentItem] = useState(null)
     const CARD_ANIMATION_DELAY = 50; // in milliseconds
@@ -27,6 +28,14 @@ export default function WardrobeSelector({data, update}) {
     return (
         <>
             <div className={"wardrobe_wrapper"}>
+
+                {!currentPage && <>
+                    <div className={"next-btn-wrapper"}>
+                        <button className={"next-button"}
+                                onClick={()=>{handleNextStep()}}
+                        >Next</button>
+                    </div>
+                </>}
 
                 {!currentPage &&
                     <div className="wardrobe_openers">
@@ -71,7 +80,7 @@ export default function WardrobeSelector({data, update}) {
                                             img={item.thumb ? item.thumb : item.image}
                                             key={key}
                                             active={JSON.stringify(item) === JSON.stringify(currentItem)}
-                                            text={item.title + (item.symbol ? item.symbol : "") + (item.price ? item.price : "")}
+                                            text={item.title +" - "+ (item.symbol ? item.symbol : "") + (item.price ? item.price : "")}
                                             action={() => {
                                                 selectItem(item, currentPage.title)
                                             }}

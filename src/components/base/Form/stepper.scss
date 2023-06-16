@@ -1,0 +1,60 @@
+.stepper-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #efefef;
+    height: 80px;
+    width: 100%;
+
+    @media screen and (max-width: 620px){
+        overflow-x: auto;
+        justify-content: flex-start;
+    }
+
+    .stepper-item {
+        height: 50px;
+        min-width: 200px;
+        padding: 10px 40px;
+        background-color: white;
+        border: 1px solid #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 2px 10px;
+        box-shadow: 0 0 6px #00000020;
+        font-size: 13px;
+        color: #bebebe;
+
+        @media screen and (max-width: 620px){
+            padding: 8px 20px;
+        }
+
+        svg {
+            display: none;
+        }
+
+        &.active {
+            border: 1px solid #E2C858;
+            background-color: #E2C858;
+            color: #fff;
+        }
+
+        &.done {
+            border: 1px solid #000;
+            color: #000;
+            div{
+                display: flex;
+                align-items: center;
+                svg {
+                    display: inline-block;
+                    margin-left: 8px;
+                    fill: #c5ae45;
+                    height: 20px;
+                    width: 20px;
+                }
+            }
+
+
+        }
+    }
+}

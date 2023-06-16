@@ -10,7 +10,6 @@ function LayoutDefault({children}) {
             <main className={"main"}>
                 {children}
             </main>
-            <footer/>
         </div>
     );
 }

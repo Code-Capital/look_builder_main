@@ -1,0 +1,97 @@
+.stepper-form-wrapper-main{
+    min-height: calc(100vh - 56px);
+
+    .builder-title{
+        text-align: center;
+        font-size: 36px;
+        font-weight: normal;
+        margin-bottom: 40px;
+        margin-top: 20px;
+    }
+
+    .step-title{
+        font-size: 18px;
+        text-align: center;
+        font-weight: bold;
+    }
+    .step-sub-title{
+        font-size: 13px;
+        text-align: center;
+        padding: 0 8px;
+        margin-bottom: 20px;
+    }
+
+    .fields{
+        margin-top: 40px;
+        min-width: 600px;
+
+
+        @media screen and (max-width: 620px){
+            min-width: 300px;
+            width: 92%;
+            margin: auto;
+            margin-bottom: 30px !important;
+        }
+        .input-group{
+            display: block;
+            margin-bottom: 22px;
+            label{
+                display: block !important;
+                margin-bottom: 6px;
+                text-align: center;
+
+            }
+        }
+        .row{
+            label{
+                text-align: left;
+            };
+            .count-block{
+                background-color: #E2C858;
+                height: 38px;
+                width: 38px;
+                margin-left: auto;
+                margin-top: 6px;
+                color: white;
+                text-align: center;
+                justify-content: center;
+                align-items: center;
+                display: flex;
+            }
+        }
+
+
+        .buttons{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 40px;
+            button{
+                margin: 0 16px;
+                background-color: transparent;
+                border: none;
+                border-bottom: 2px solid black;
+                padding: 0 !important;
+                font-size: 14px;
+
+                &:disabled{
+                    color: grey;
+                    border-color: grey;
+                }
+            }
+        }
+    }
+
+
+    .steps-wrapper{
+        min-height: calc(100vh - 136px);
+        display: flex;
+        justify-content: center;
+    }
+    .stepper-bottom{
+        //position: absolute;
+        //bottom: 0;
+        //left: 0;
+        //right: 0;
+    }
+}

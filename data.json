@@ -1,0 +1,189 @@
+{
+  "FABRIC": [
+    "1",
+    "2",
+    "3"
+  ],
+  "SUIT": {
+    "Closure": "",
+    "Lapel": "",
+    "Lapel Width": "",
+  },
+  "TROUSERS": {
+    "Waistband": "",
+    "Waistband Height": "",
+    "Waistband Details": "",
+    "Waistband Construction": "",
+    "Fly": "",
+  },
+  "WAISTCOAT": {
+    "Waistcoat": "",
+    "Closure": "",
+    "Style": "",
+    "Chest Pocket": "",
+    "Side Pocket": "",
+    "Back Style": "",
+    "Lining Color": ""
+  },
+  "SIZE_CHART": {
+    "TROUSERS": {
+      "XXXS": [
+        {
+          "number": 42,
+          "details": {
+            "chest-width": "",
+            "waist-width": "",
+            "jacket-length": "",
+            "sleeve-length-right": "",
+            "sleeve-length-left": "",
+            "upper arm & armhole": [
+              "standard",
+              "medium",
+              "high"
+            ]
+          }
+        }
+      ],
+      "S": [
+        {
+          "number": 44,
+          "details": {
+            "chest-width": {
+              "advanced": false,
+              "default": 10
+            },
+            "upper arm & armhole": [
+              "standard",
+              "medium",
+              "high"
+            ]
+          }
+        },
+        {
+          "number": 22,
+          "details": {
+            "chest-width": {
+              "advanced": false,
+              "default": 10
+            },
+            "chest-height": {
+              "advanced": true,
+              "default": 10
+            },
+            "upper arm & armhole": [
+              "standard",
+              "medium",
+              "high"
+            ]
+          }
+        }
+      ]
+    },
+    "WAISTCOAT": {
+      "XXXS": [
+        {
+          "number": 42,
+          "details": {
+            "chest-width": "",
+            "waist-width": "",
+            "jacket-length": "",
+            "sleeve-length-right": "",
+            "sleeve-length-left": "",
+            "upper arm & armhole": [
+              "standard",
+              "medium",
+              "high"
+            ]
+          }
+        }
+      ],
+      "S": [
+        {
+          "number": 44,
+          "details": {
+            "chest-width": {
+              "advanced": false,
+              "default": 10
+            },
+            "upper arm & armhole": [
+              "standard",
+              "medium",
+              "high"
+            ]
+          }
+        },
+        {
+          "number": 22,
+          "details": {
+            "chest-width": {
+              "advanced": false,
+              "default": 10
+            },
+            "chest-height": {
+              "advanced": true,
+              "default": 10
+            },
+            "upper arm & armhole": [
+              "standard",
+              "medium",
+              "high"
+            ]
+          }
+        }
+      ]
+    },
+    "JACKET": {
+      "XXXS": [
+        {
+          "number": 42,
+          "details": {
+            "chest-width": "",
+            "waist-width": "",
+            "jacket-length": "",
+            "sleeve-length-right": "",
+            "sleeve-length-left": "",
+            "upper arm & armhole": [
+              "standard",
+              "medium",
+              "high"
+            ]
+          }
+        }
+      ],
+      "S": [
+        {
+          "number": 44,
+          "details": {
+            "chest-width": {
+              "advanced": false,
+              "default": 10
+            },
+            "upper arm & armhole": [
+              "standard",
+              "medium",
+              "high"
+            ]
+          }
+        },
+        {
+          "number": 22,
+          "details": {
+            "chest-width": {
+              "advanced": false,
+              "default": 10
+            },
+            "chest-height": {
+              "advanced": true,
+              "default": 10
+            },
+            "upper arm & armhole": [
+              "standard",
+              "medium",
+              "high"
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

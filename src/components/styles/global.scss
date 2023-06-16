@@ -59,7 +59,136 @@ body {
                     background: inherit;
                 }
             }
+            .sidebar-area{
+                width: 420px;
+
+                .sidebar-tabs-list{
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-start;
+                    overflow-x: auto;
+                    overflow-y: hidden;
+                    white-space: nowrap;
+                    width: 100%;
+                    background-color: #000000;
+                    padding: 0;
+
+                    scrollbar-width: none;
+                    -ms-overflow-style: none;
+
+                    &::-webkit-scrollbar {
+                        display: none;
+                    }
+
+                    li{
+                        width: 200px;
+                        background-color: #000000;
+                        border: none;
+                        color:#ffffff;
+                        margin-right: 10px;
+                        border-radius: 0;
+                        font-size: 13px;
+                        padding: 10px 20px;
+                        margin-bottom: 1px;
+                        outline: none;
+                        &.react-tabs__tab--selected{
+                            border: none;
+                            border-bottom: 2px solid #ffffff;
+                        }
+                        &.react-tabs__tab:focus:after{
+                            content: none !important;
+                        }
+                    }
+                }
+
+                .tab{
+
+                    .tab-heading{
+
+                    }
+
+                    .tab-column{
+                        overflow-y: scroll;
+                        height: calc(100vh - 300px);
+                    }
+
+                }
+
+                .jacket-card{
+                    padding: 18px 18px;
+                    border-radius: 6px;
+                    border: 1px solid #cecece;
+                    margin-bottom: 20px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    cursor: pointer;
+                    &.selected{
+                        border-color: #7e7e7e;
+                    }
+                    &:hover{
+                        border-color: #7e7e7e;
+                    }
+                    .title{
+                        font-weight: 500;
+                        color: black;
+                    }
+                    .option{
+                        color: grey;
+                        font-size: 13px;
+                    }
+                }
+
+
+
+                .fabric-tab{
+                    //padding: 0;
+                    .fabrics-selector{
+                        .fabric-card{
+                            padding: 6px;
+                            margin-bottom: 30px;
+                            border: 1px solid transparent;
+                            border-radius: 4px;
+                            &.selected{
+                                border-color: #7e7e7e;
+                            }
+                            .fabric-image{
+                                height: 140px;
+                                width: 100%;
+                                img{
+                                    height: 100%;
+                                    width: 100%;
+                                    border-radius: 6px;
+                                    object-fit: cover;
+                                }
+                            }
+                            .details{
+                                padding: 0 10px;
+                            }
+                        }
+                    }
+                }
+
+
+                .sidebar-footer{
+                    height: 103px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-top: 1px solid #bbbbbb;
+
+                    button{
+                        min-width: 48%;
+                        margin: 2px;
+                    }
+                    span{
+                        font-size: 12px;
+                    }
+                }
+            }
+
         }
+
     }
 
     .app {

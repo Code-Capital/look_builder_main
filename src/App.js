@@ -9,6 +9,8 @@ import Footer from './components/layout/footer';
 import SuitBuilderRoot from "./pages/SuitBuilderRoot";
 import {AppProvider} from "./context/SuitBuilderContext";
 import {SelectionProvider} from "./context/UserSelectionContext";
+import LookBuilder from "./pages/LookBuilder";
+import LookBuilderStandalone from "./components/look-builder-standalone/LB";
 
 function App() {
     return (
@@ -19,6 +21,14 @@ function App() {
                     <Route path="/" element={
                         <>
                             <LookBuilderForm/>
+                            <Footer/>
+                        </>
+
+                    }/>
+
+                    <Route path="/look-builder" element={
+                        <>
+                            <LookBuilderStandalone/>
                             <Footer/>
                         </>
 

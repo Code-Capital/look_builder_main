@@ -45,7 +45,7 @@ export default function WardrobeSelector({data, update, handleNextStep}) {
                                 <SelectorCard
                                     key={key}
                                     img={item.image}
-                                    text={item.title}
+                                    text={item.title === "T-shirts" ? "Shirts" : item.title}
                                     action={() => {
                                         openPage(item);
                                     }}
@@ -62,7 +62,7 @@ export default function WardrobeSelector({data, update, handleNextStep}) {
                     <div className={"wardrobe_tabs"}>
                         <div className={`wardrobe-tab`}>
                             <div className="header text-center">
-                                <span>{currentPage.title}</span>
+                                <span>{currentPage.title === "T-shirts" ? "Shirts" : currentPage.title}</span>
                             </div>
 
                             <div className="items">

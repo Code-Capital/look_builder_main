@@ -31,6 +31,29 @@ export const GetData = async (data) => {
     }
 };
 
+export const GetDataLB = async (data) => {
+    try {
+        var config = {
+            method: 'post',
+            url: BASE_URL,
+            headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+            data: {
+                func: "1.1",
+                ...data
+            }
+        };
+        const response = await axios(config);
+        if (response.data.success) {
+            return response.data;
+        } else {
+            console.log("Error getting data")
+        }
+    } catch (error) {
+        console.log("Error getting data")
+        throw new Error(error.response?.data?.message || "Failed to login");
+    }
+};
+
 export const PostData = async (data) => {
     try {
         let config = {

@@ -37,6 +37,7 @@
     }
 
     .sidebar-area{
+        overflow-x: hidden;
         width: 420px;
 
         .sidebar-tabs-list{
@@ -215,7 +216,7 @@
 .slider-left{
     position: absolute;
     width: 420px;
-    height: calc(100% - var(--header-mobile));
+    height: calc(100% - 0);
     background: rgba(255, 255, 255, 0.96);
     backdrop-filter: blur(2px);
     transition: all 300ms ease-in-out;
@@ -325,4 +326,137 @@
 .jacket-card{
     text-transform: capitalize;
 }
+@media only screen and (max-width:992px){
+    body .app header .navbar{
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 9 !important;
+    }
+    .suit_builder_container .main-area .suit-builder-view {
+        max-width: calc(100vw);
+        min-width: 375px;
+        margin: 50px auto 0 auto;
+        position: fixed;
+        top: 0;
+        z-index: 9 !important;
+    }
+    .suit_builder_container .jacket-viewer .holder {
+        max-width: 600px;
+        margin: auto;
+        position: relative;
+        width: calc( var(--vh,1vh) * 68.9575 - var(--header-mobile));
+        min-height: 220px;
+    }
 
+    .suit_builder_container .main-area .suit-builder-view .viewer img {
+        max-height: 220px;
+        max-width: 50% !important;
+        margin:0 auto;
+    }
+    .suit_builder_container .main-area {
+        min-width: calc(100vw);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #EFEFEF;
+    }
+.suit_builder_container .sidebar-area {
+    width: 100% !important;
+    position: absolute;
+    top: 55%;
+    background: #fff;
+}
+    .suit-builder-view .slick-slider.slick-initialized .slick-prev, .slick-next{
+        z-index: 9999 !important;
+    }
+    .suit-builder-view .slick-slider.slick-initialized .slick-prev{
+        left: 0 !important;
+        z-index: 999 !important;
+    }
+    .suit-builder-view .slick-slider.slick-initialized .slick-next{
+        right: 0 !important;
+        z-index: 999 !important;
+    }
+    .slider-left{
+        position: absolute;
+        width: 100%;
+        //height: calc(100% - var(--header-mobile));
+        background: rgba(255, 255, 255, 0.96);
+        backdrop-filter: blur(2px);
+        transition: all 300ms ease-in-out;
+        z-index: 1;
+        top: var(--header-mobile);
+        right: -100%;
+        padding: 10px;
+        &.active{
+            right: 0;
+        }
+
+        .sidebar-footer{
+            height: 103px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-top: 1px solid #bbbbbb;
+
+            button{
+                min-width: 48%;
+                margin: 2px;
+            }
+            span{
+                font-size: 12px;
+            }
+        }
+
+        .content{
+            overflow-y: scroll;
+            height: calc(100vh - 166px);
+        }
+
+        .tab-column.inner{
+            height: calc(100vh - 240px) !important;
+        }
+        .inner-selection{
+            padding: 18px 18px;
+            border-radius: 6px;
+            border: 1px solid #cecece;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-direction: column;
+            cursor: pointer;
+            &.selected{
+                border-color: #7e7e7e;
+            }
+            &:hover{
+                border-color: #7e7e7e;
+            }
+            .title{
+                font-weight: 500;
+                color: black;
+                margin-top: 20px;
+            }
+            .option{
+                color: grey;
+                font-size: 13px;
+            }
+        }
+
+
+
+
+    }
+}
+
+
+
+@media only screen and (max-width:400px){
+    .suit_builder_container .sidebar-area {
+        width: 100% !important;
+        position: absolute;
+        top: 45%;
+        background: #fff;
+    }
+}

@@ -36,7 +36,8 @@ export default function SuitBuilderRoot() {
 
                     <div className="suit-builder-view">
                         <Slider
-                            dots={true}
+                            dots={false}
+                            arrows={true}
                             ref={sliderRef}
                             infinite={false}
                             speed={500}

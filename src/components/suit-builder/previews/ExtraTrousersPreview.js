@@ -30,7 +30,7 @@ export default function TrousersPreview(extra) {
     if (selectedFabric && selectionData) {
 
         return (
-            <div className={"viewer jacket-viewer"} id={"waist-coat-view"}>
+            <div className={"viewer jacket-viewer "} id={"waist-coat-view"}>
                 <div className={`holder ${!hasExtraTrousers ? "overlay" : ""}`}>
                     <img className={"img-fluid"} src={Work("base")}/>
                     <img className={"img-fluid"} src={Work("waistband")}/>

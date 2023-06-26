@@ -10,6 +10,12 @@
         overflow-x: auto;
         justify-content: flex-start;
     }
+    @media screen and (max-width: 992px){
+        overflow-x: auto;
+        justify-content: flex-start;
+        position: fixed;
+        bottom: 0rem;
+    }
 
     .stepper-item {
         height: 50px;

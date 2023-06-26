@@ -13,10 +13,12 @@ export default function WardrobeSelector({data, update, handleNextStep}) {
     function goToRoot() {
         setCurrentPage(null);
     }
+
     function openPage(item) {
         setCurrentPage(item);
     }
-    useEffect(()=>{
+
+    useEffect(() => {
         setCurrentItem(null)
     }, [currentPage])
 
@@ -32,8 +34,11 @@ export default function WardrobeSelector({data, update, handleNextStep}) {
                 {!currentPage && <>
                     <div className={"next-btn-wrapper"}>
                         <button className={"next-button"}
-                                onClick={()=>{handleNextStep()}}
-                        >Next</button>
+                                onClick={() => {
+                                    handleNextStep()
+                                }}
+                        >Next
+                        </button>
                     </div>
                 </>}
 
@@ -45,7 +50,11 @@ export default function WardrobeSelector({data, update, handleNextStep}) {
                                 <SelectorCard
                                     key={key}
                                     img={item.image}
-                                    text={item.title === "T-shirts" ? "Shirts" : item.title}
+                                    text={
+                                        item.title === "T-shirts" ? "Shirts" :
+                                            item.title === "Pants" ? "Trousers" :
+                                                item.title === "Shoes" ? "Footwear" : item.title
+                                    }
                                     action={() => {
                                         openPage(item);
                                     }}
@@ -62,7 +71,9 @@ export default function WardrobeSelector({data, update, handleNextStep}) {
                     <div className={"wardrobe_tabs"}>
                         <div className={`wardrobe-tab`}>
                             <div className="header text-center">
-                                <span>{currentPage.title === "T-shirts" ? "Shirts" : currentPage.title}</span>
+                                <span>{currentPage.title === "T-shirts" ? "Shirts" :
+                                    currentPage.title === "Pants" ? "Trousers" :
+                                        currentPage.title === "Shoes" ? "Footwear" : currentPage.title}</span>
                             </div>
 
                             <div className="items">
@@ -80,7 +91,7 @@ export default function WardrobeSelector({data, update, handleNextStep}) {
                                             img={item.thumb ? item.thumb : item.image}
                                             key={key}
                                             active={JSON.stringify(item) === JSON.stringify(currentItem)}
-                                            text={item.title +" - "+ (item.symbol ? item.symbol : "") + (item.price ? item.price : "")}
+                                            text={item.title + " - " + (item.symbol ? item.symbol : "") + (item.price ? item.price : "")}
                                             action={() => {
                                                 selectItem(item, currentPage.title)
                                             }}
@@ -94,7 +105,7 @@ export default function WardrobeSelector({data, update, handleNextStep}) {
 
                             <div className="footer">
                                 <div className="mobile-info">
-                                    {currentItem  ? <>
+                                    {currentItem ? <>
                                         <span>{currentItem?.symbol} {currentItem?.price}</span>
                                         &nbsp; -  &nbsp;
                                         <span>{currentItem?.title}</span>

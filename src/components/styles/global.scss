@@ -354,3 +354,14 @@ body {
 
 
 }
+@media only screen and (max-width:540px){
+    .logo-styling{
+        margin-left: 3.9rem;
+    }
+}
+@media only screen and (max-width:992px){
+.next-btn-wrapper button {
+    position: fixed;
+    bottom: 0.5rem;
+}
+}

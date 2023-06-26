@@ -33,8 +33,11 @@ export default function TopNavigation() {
                         <i className="fa fa-bars text-dark"/>
                     </a>
 
-                    <img src={logo} alt="" className={"img-fluid"}
-                         style={{maxHeight: 24}}/>
+                    <a className="text-decoration-none" href="http://www.izotti.com/">
+                        <img src={logo} alt="" className={"img-fluid logo-styling"}
+                             style={{maxHeight: 24}}/>
+                    </a>
+
 
                     <div>
                         <a href="#" className={"btn btn-sm"}>
@@ -65,16 +68,16 @@ export default function TopNavigation() {
             }}>
                 <nav className={"side-nav p-1"}>
                     <br/>
-                    <Link to={"/"} className={"btn btn-outline-dark rounded-0 w-100 mb-2 text-start"}>Wedding Planner</Link>
+                    <Link to={"/"} className={"border-0 btn btn-outline-dark rounded-0 w-100 mb-2 text-start"}>Wedding Planner</Link>
 
                     
-                    <Link to={"suit-builder"} className={"btn btn-outline-dark rounded-0 w-100 mb-2 text-start"}>Suit
+                    <Link to={"suit-builder"} className={"border-0 btn btn-outline-dark rounded-0 w-100 mb-2 text-start"}>Suit
                         Builder</Link>
 
-                    <Link to={"look-builder"} className={"btn btn-outline-dark rounded-0 w-100 mb-2 text-start"}>Look
+                    <Link to={"look-builder"} className={"border-0 btn btn-outline-dark rounded-0 w-100 mb-2 text-start"}>Look
                         Builder</Link>
 
-                    <Link to={"https://shirts.dtail.ai/"} className={"btn btn-outline-dark rounded-0 w-100 mb-2 text-start"}>Shirt
+                    <Link to={"https://shirts.dtail.ai/"} className={"border-0 btn btn-outline-dark rounded-0 w-100 mb-2 text-start"}>Shirt
                         Builder</Link>
                 </nav>
             </aside>

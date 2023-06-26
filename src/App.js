@@ -21,7 +21,7 @@ function App() {
                     <Route path="/" element={
                         <>
                             <LookBuilderForm/>
-                            <Footer/>
+                            {/*<Footer/>*/}
                         </>
 
                     }/>
@@ -29,7 +29,7 @@ function App() {
                     <Route path="/look-builder" element={
                         <>
                             <LookBuilderStandalone/>
-                            <Footer/>
+                            {/*<Footer/>*/}
                         </>
 
                     }/>

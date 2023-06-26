@@ -473,3 +473,53 @@
         background: #fff;
     }
 }
+@media only screen and (max-width:992px) {
+    .suit_builder_container .sidebar-area {
+        width: 100% !important;
+        position: absolute;
+        top: 35%;
+        background: #fff;
+    }
+    .sidebar-footer{
+        position: fixed;
+        width: 100%;
+        bottom: 0;
+        background-color: #ffffff;
+    }
+    .sidebar-area .react-tabs{
+        margin: 4rem 0;
+        padding:0 0 6rem 0;
+    }
+    .main-area{
+        max-height: 280px !important;
+    }
+    .suit-builder-view{
+        margin: 83px auto 0 auto !important;
+    }
+    .sidebar-tabs-list {
+        top: 2.8rem;
+        z-index: 9;
+        position: fixed;
+    }
+    .suit-builder-view .slick-dots {
+        position: absolute;
+        bottom: 0px;
+        left: 0 !important;
+        display: block;
+        width: unset !important;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        text-align: center;
+        min-height: 30px;
+        li{
+            margin:0 !important;
+            width: 15px  !important;
+        }
+
+    }
+
+
+
+}
+

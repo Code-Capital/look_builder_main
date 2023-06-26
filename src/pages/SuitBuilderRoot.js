@@ -43,6 +43,15 @@ export default function SuitBuilderRoot() {
                             speed={500}
                             slidesToShow={1}
                             slidesToScroll={1}
+                            responsive={[
+                                {
+                                    breakpoint: 992,
+                                    settings: {
+                                        dots: true,
+                                        arrows:false
+                                    }
+                                }
+                            ]}
                         >
 
                             <JacketPreview/>

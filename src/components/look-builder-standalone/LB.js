@@ -295,7 +295,7 @@ export default function LookBuilderStandalone() {
         return (
             <>
                 <div className="container-fluid look_builder_wrapper">
-                    <div className="row">
+                    <div className="row standAlone">
                         <div className="person-col col">
                             <Person
                                 pants={selectedPants}

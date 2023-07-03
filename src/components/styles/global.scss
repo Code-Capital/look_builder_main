@@ -264,6 +264,12 @@ body {
 
         @media screen and (max-width: 460px) {
             flex-direction: column;
+
+        }
+    }
+    .standAlone{
+        @media screen and (max-width: 460px) {
+            height: 90vh;
         }
     }
 
@@ -359,9 +365,9 @@ body {
         margin-left: 3.9rem;
     }
 }
-@media only screen and (max-width:992px){
-.next-btn-wrapper button {
-    position: fixed;
-    bottom: 0.5rem;
-}
-}
+//@media only screen and (max-width:992px){
+//.next-btn-wrapper button {
+//    position: fixed;
+//    bottom: 0.5rem;
+//}
+//}

@@ -296,7 +296,7 @@ export default function LookBuilder() {
         return (
             <>
                 <div className="container-fluid look_builder_wrapper">
-                    <div className="row">
+                    <div className="row wp">
                         <div className="person-col col">
                             <Person
                                 pants={selectedPants}
